@@ -16,3 +16,14 @@ def array_sum(list):
 list2 = ["Wayne", "Katie","Daryl", "Don"]
 
 print(array_sum(list2))
+
+def rev_string_list(list):
+    new_list = []
+    for i in list:
+        new_list.append(i[::-1])
+    return new_list
+
+#word = "hello"
+#print(word[::-1])
+
+print(rev_string_list(list2))
