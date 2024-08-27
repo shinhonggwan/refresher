@@ -27,3 +27,15 @@ def rev_string_list(list):
 #print(word[::-1])
 
 print(rev_string_list(list2))
+
+def contain_string(list, word):
+    new_list = []
+    for i in list:
+        if word in i:
+            new_list.append(i)
+    return new_list
+
+list3 = ['cats', 'tacks', 'scat', 'stack']
+word1 = 'cat'
+
+print(contain_string(list3,word1))
