@@ -30,3 +30,4 @@ def splice(text, target):
 
 words = "Cindy felt an intense abdominal pain"
 print(splice(words, 'in'))
+
