@@ -20,7 +20,7 @@ def splice(text, target):
         index = text.find(target, starting_at)
         # if the target is in the remaining part of the text
         if index != -1:
-            new_text += text[starting_at:index]
+            new_text += text[starting_at:index] # <- This part needs to be understood. 09/03/2024
             starting_at = index + len(target)
         # if the target wasn't in the remaining part of the text
         else:
