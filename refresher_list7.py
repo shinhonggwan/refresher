@@ -17,3 +17,12 @@ def roots_of_perfect_squares(num_list):
     return sorted(new_list)
 
 print(roots_of_perfect_squares([81,70,22,26,24,49,23,9]))
+
+print(int(36 ** 0.5))
+
+def roots_of_perfect_squares_another(num_list):
+    """returns the square roots of the perfect squares in num_list, in sorted order"""
+    new_list = [int(num ** 0.5) for num in num_list if num == int(num ** 0.5 + 0.5) ** 2]
+    return new_list
+
+print(roots_of_perfect_squares_another([81,70,22,26,24,49,23,9]))
