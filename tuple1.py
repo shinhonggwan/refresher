@@ -35,7 +35,6 @@ print(vocab_words)
 del vocab_words[2]
 print(vocab_words)
 
-
 def square_val(val):
     val[0] = val[0] * val[0]
     print(val)
@@ -43,4 +42,20 @@ def square_val(val):
 num_list = [8]
 square_val(num_list)
 print(num_list)
+
+print("-------")
+
+def some_func(my_list=[]):
+    my_list.append(1)
+    return my_list
+
+print(some_func())
+print(some_func())
+print(some_func())
+
+def some_func(my_list=None):
+    if my_list is None:
+        my_list = []
+    my_list.append(1)
+    return my_list
 
