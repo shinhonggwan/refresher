@@ -7,7 +7,7 @@ print("---------")
 def insert_front(list, something):
     # list.append(something)
     # need to insert something to the front of the list
-
-    return list
+    new_answer = [something] + list
+    return new_answer
 
 print(insert_front([9, -55, 37], "bob"))
