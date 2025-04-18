@@ -4,10 +4,12 @@
 # Assignment: Assignment 2 Recursion and Recurrence Relations
 
 def evaluateString(input):
+    "calculates a simple string of integers combined with + operator"
+    # if + not found, then returns the input
     if "+" not in input:
-        return input
+        return int(input)
     else:
         first, last = input.split("+", 1)
-        return input(first) + evaluateString(last)
+        return int(first) + evaluateString(last)
 
-print(evaluateString("2+3+4"))
+# print(evaluateString("2+3+4"))
