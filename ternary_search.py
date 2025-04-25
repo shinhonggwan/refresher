@@ -10,4 +10,11 @@ def ternary_serach(input_list, target):
             # This is the base case
             return None
 
+        # Thie effectivly breaks the array into three parts
+        middle_index_1 = ( (right - left) + left ) // 3
+        middle_index_2 = ( right - (right - left) ) // 3
+
+    return search_function()
+
+
 
