@@ -3,7 +3,7 @@
 # Course: CS 325
 # Assignment: Assignment 3 Correctness of Algorithms and Divide & Conquer
 
-def ternary_serach(input_list, target):
+def ternary_search(input_list, target):
 
     def search_function(left, right):
         if left > right:
