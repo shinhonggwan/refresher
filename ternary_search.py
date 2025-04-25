@@ -36,7 +36,7 @@ def ternary_search(input_list, target):
     return search_function(0, len(input_list) - 1)
 
 
-print(ternary_search([10, 20, 30, 40, 50], 40))
+#print(ternary_search([10, 20, 30, 40, 50], 40))
 
 
 
