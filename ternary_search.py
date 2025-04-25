@@ -12,23 +12,24 @@ def ternary_search(input_list, target):
             return None
 
         # Thie effectivly breaks the array into three parts
-        middle_index_1 = ( left + (right - left) ) // 3
-        middle_index_2 = ( right - (right - left) ) // 3
+        middle_index_1 = left + (right - left)  // 3
+        middle_index_2 = right - (right - left)  // 3
 
+        # This checks if the target is at the either of middle points
         if input_list[middle_index_1] == target:
+            # this returns 1-indexed position
             return middle_index_1 + 1
         if input_list[middle_index_2] == target:
             return middle_index_2 + 1
 
         if target < input_list[middle_index_1]:
             return search_function(left, middle_index_1 - 1)
-        elif target > input_list[middle_index_2]:
+        if target > input_list[middle_index_2]:
             return search_function(middle_index_2 + 1, right)
         else:
             return search_function(middle_index_1 + 1, middle_index_2 - 1)
 
     return search_function(0, len(input_list) - 1)
-
 
 
 print(ternary_search([10, 20, 30, 40, 50], 40))
