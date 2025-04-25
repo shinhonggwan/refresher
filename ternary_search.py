@@ -22,10 +22,14 @@ def ternary_search(input_list, target):
         if input_list[middle_index_2] == target:
             return middle_index_2 + 1
 
+        # This group of recursive searches decides which third part
         if target < input_list[middle_index_1]:
+            # seraching the left third
             return search_function(left, middle_index_1 - 1)
         if target > input_list[middle_index_2]:
+            # searching the right third
             return search_function(middle_index_2 + 1, right)
+            # searching the middle third
         else:
             return search_function(middle_index_1 + 1, middle_index_2 - 1)
 
