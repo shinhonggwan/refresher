@@ -11,4 +11,5 @@ def max_independent_set(nums):
 
     length_num = len(nums)
 
+    cache =
 
