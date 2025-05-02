@@ -23,4 +23,4 @@ def dna_match_topdown(DNA1, DNA2):
     # recursion from the start of both characters
 
 
-print(dna_match_topdown("TAGTTCCGTCAAA" "GTGTTCCCGTCAAA"))
+print(dna_match_topdown("TAGTTCCGTCAAA", "GTGTTCCCGTCAAA"))
