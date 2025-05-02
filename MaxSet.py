@@ -10,3 +10,14 @@ def max_independent_set(nums):
         return []
 
     length_num = len(nums)
+
+    cache = [(0, []) for x in range(length_num)]
+    # initialize base case and other subproblem values to 0
+
+    if nums[0] > 0:
+        # this is the base case for the first value
+        cache[0] = (nums[0], nums[0])
+    else:
+        cache[0] = (0, [])
+
+
