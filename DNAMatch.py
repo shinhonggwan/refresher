@@ -24,6 +24,6 @@ def dna_match_topdown(DNA1, DNA2):
 
 # print(dna_match_topdown("TAGTTCCGTCAAA", "GTGTTCCCGTCAAA"))
 
-def dna_match_topdown(DNA1, DNA2):
+def dna_match_bottomup(DNA1, DNA2):
 
     return None
