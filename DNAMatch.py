@@ -5,3 +5,10 @@
 
 def dna_match_topdown(DNA1, DNA2):
 
+    def subsequence(x, y):
+        # a recursive function to calculate the best continuous length
+        if x == len(DNA1) or y == len(DNA2):
+            # base case
+            return 0
+
+
