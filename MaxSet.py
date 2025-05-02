@@ -11,5 +11,15 @@ def max_independent_set(nums):
 
     length_num = len(nums)
 
-    cache =
+    cache = [0] * (length_num + 1)
+    # initializing base.
+
+    for i in range(1, length_num +1 ):
+        current = nums[i -1]
+        # jump back to the previous one if the value will be used
+        take = current + (cache[i - 2] if i > 1 else 0)
+        jump = cache[i - 1]
+        cache[i] = max(take, jump)
+
+
 
