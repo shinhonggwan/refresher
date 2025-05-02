@@ -44,6 +44,7 @@ def max_independent_set(nums):
             # reverse the order since the values are from the end
 
 
-
+#print(max_independent_set([7, 2, 5, 8, 6]))
+#print(max_independent_set([10, -3, 0]))
 
 
