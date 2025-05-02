@@ -25,5 +25,12 @@ def dna_match_topdown(DNA1, DNA2):
 # print(dna_match_topdown("TAGTTCCGTCAAA", "GTGTTCCCGTCAAA"))
 
 def dna_match_bottomup(DNA1, DNA2):
+    # this will take some time, but using iteration
+    length_dna1 = len(DNA1)
+    length_dna2 = len(DNA2)
+
+    # Creating a 2D memo table as shown from the Exploration 4.2 work/example.py
+    cache = [[0] * (length_dna2 + 1)] for x in range(length_dna1)
+
 
     return None
