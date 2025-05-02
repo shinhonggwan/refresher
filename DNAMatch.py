@@ -30,7 +30,19 @@ def dna_match_bottomup(DNA1, DNA2):
     length_dna2 = len(DNA2)
 
     # Creating a 2D memo table as shown from the Exploration 4.2 work/example.py
-    cache = [[0] * (length_dna2 + 1)] for x in range(length_dna1)
+    cache = [[0] * (length_dna2 + 1) for x in range(length_dna1 +1) ]
 
+    # inserting characters into the table created above
+    for i in range(length_dna1-1, -1, -1):
+        # from length_dna1 - 1 to 0
+        for j in range(length_dna2-1, -1, -1):
+            # from length_dna 2 to 0
+            if DNA1[i] == DNA2[j]:
+                # if DNA[i] character and DNA[j] character match
+                cache[i][j] = 1 + cache[i + 1][j + 1]
+            else:
+                # if they don't
+                cache[i][j] = max(cache[i + 1][j], cache[i][j +1])
 
-    return None
+    return cache[length_dna1][length_dna2]
+
