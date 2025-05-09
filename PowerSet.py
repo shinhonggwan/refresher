@@ -7,7 +7,7 @@ from copy import deepcopy
 
 def permutations_backtracking(starting_index, combination, output, input_set):
     output.append(combination[:])
-    # Adds the copied combination set as a copy to the output
+    # Adds the combination set as a copy to the output
 
     for i in range(starting_index, len(input_set)):
         # iteratating
