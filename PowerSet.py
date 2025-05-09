@@ -23,4 +23,5 @@ def powerset(input_set):
     permutations_backtracking(0, [], output, input_set)
     return output
 
-print(powerset([1,2,3]))
+#print(powerset([1,2,3]))
+
