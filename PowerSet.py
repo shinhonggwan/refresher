@@ -19,7 +19,7 @@ def permutations_backtracking(starting_index, combination, output, input_set):
 
 def powerset(input_set):
     output = []
-    # list storage for all sub
+    # list storage for all combination sets
     permutations_backtracking(0, [], output, input_set)
     return output
 
