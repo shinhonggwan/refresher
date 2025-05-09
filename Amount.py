@@ -4,4 +4,8 @@
 # Assignment: Assignment: Backtracking
 
 def amount(nums_list, target_sum):
-    return
+    counter = {}
+    # a dictionary that counts how many times
+    for number in nums_list:
+        if number in counter:
+            counter[num]
