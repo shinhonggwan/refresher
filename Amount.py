@@ -3,7 +3,7 @@
 # Course: CS 325
 # Assignment: Assignment: Backtracking
 
-
+# the below code is modified from the Exploration 5.3 work/example.py
 def permutations_backtracker(starting_index, combination, remainder_sum, unique_numbers, counter, results):
     if remainder_sum == 0:
         # base case
@@ -39,11 +39,11 @@ def amount(nums_list, target_sum):
 
     unique_numbers = sorted(counter.keys())
     # sorts list of unique numbers and no same combination
-    results = []
+    result = []
 
-    permutations_backtracker(0, [], target_sum, unique_numbers, counter, results)
+    permutations_backtracker(0, [], target_sum, unique_numbers, counter, result)
     # backtracker starting from 0
-    return results
+    return result
 
 nums_list = [11, 1, 3, 2, 6, 1, 5]
 target_sum = 8
