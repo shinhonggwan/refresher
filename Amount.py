@@ -45,6 +45,6 @@ def amount(nums_list, target_sum):
     # backtracker starting from 0
     return result
 
-nums_list = [11, 1, 3, 2, 6, 1, 5]
-target_sum = 8
-print(amount(nums_list, target_sum))
+#nums_list = [11, 1, 3, 2, 6, 1, 5]
+#target_sum = 8
+#print(amount(nums_list, target_sum))
