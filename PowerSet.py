@@ -5,10 +5,22 @@
 
 from copy import deepcopy
 
+def permutations_backtracking(starting_index, combination, output, input_set):
+    output.append(combination[:])
+    # Adds the copied combination set as a copy to the output
+
+    for i in range(starting_index, len(input_set)):
+        # iteratating
+        combination.append(input_set[i])
+        permutations_backtracking(i + 1, combination, output, input_set)
+        # backtrack
+        combination.pop()
+
+
 def powerset(input_set):
+    output = []
+    # list storage for all sub
+    permutations_backtracking(0, [], output, input_set)
+    return output
 
-    def permutations_backtracking(starting_index, subset, output):
-        output.append(subset[:])
-
-        for i in range(starting_index, len(input_set)):
-            for i in range(starting_index, len(input_set)):
+print(powerset([1,2,3]))
