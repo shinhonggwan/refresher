@@ -5,4 +5,10 @@
 
 from copy import deepcopy
 
-def
+def powerset(input_set):
+
+    def permutations_backtracking(starting_index, subset, output):
+        output.append(subset[:])
+
+        for i in range(starting_index, len(input_set)):
+            for i in range(starting_index, len(input_set)):
