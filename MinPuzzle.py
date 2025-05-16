@@ -5,7 +5,7 @@
 
 def minEffort(puzzle):
     # the goal is to reach the bottom-right cell '[m-1][n-1]' with minimal effort.
-    # The below code is heavily modified version of the concept shown at Exploration 6.3 Dijkstra's algorithm work/example.py
+    # The below code is modified version of the concept shown at Exploration 6.3 Dijkstra's algorithm work/example.py
 
     m, n = len(puzzle), len(puzzle[0])
     directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
