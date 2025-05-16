@@ -35,7 +35,7 @@ def minEffort(puzzle):
 
         for row_difference, column_difference in directions:
             new_row, new_column = row + row_difference, column + column_difference
-            if 0 <= new_row + m and 0 <= new_column < n and (new_row, new_column) in unvisited:
+            if 0 <= new_row < m and 0 <= new_column < n and (new_row, new_column) in unvisited:
                 effort = abs(puzzle[row][column] - puzzle[new_row][new_column])
                 maxEffort = max(dist[row][column], effort)
                 if maxEffort < dist[new_row][new_column]:
