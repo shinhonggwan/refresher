@@ -42,7 +42,7 @@ def minEffort(puzzle):
             new_row, new_column = row + row_difference, column + column_difference
             # get the neighbor cell row and the neighbor cell column
             if 0 <= new_row < m and 0 <= new_column < n and (new_row, new_column) in unvisited:
-                # if the new cell row and the new cell column within puzzle within the puzzel limits
+                # if the new cell row and the new cell column within the puzzel limits
                 # and unvisitied
                 effort = abs(puzzle[row][column] - puzzle[new_row][new_column])
                 # get the difference in height between the current and the neighbor
