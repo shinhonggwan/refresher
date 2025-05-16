@@ -43,6 +43,5 @@ def minEffort(puzzle):
 
         return dist[m-1][n-1]
 
-
 puzzle = [[1, 3, 5], [2, 8, 3], [3, 4, 5]]
 print(minEffort(puzzle))
