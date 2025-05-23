@@ -3,6 +3,7 @@
 # Course: CS 325
 # Assignment: Assignment: Greedy Technique & Graph Algorithms Part-2
 
+
 def feedDog(hunger_level, biscuit_size):
     # a dog feeding function that tells how many dogs can satisfy with biscuits
     result = []
@@ -18,9 +19,12 @@ def feedDog(hunger_level, biscuit_size):
 
     while hungry < n and biscuit < m:
         if sorted_biscuit_size[biscuit] >= sorted_hunger_level[hungry]:
+
             hungry += 1
-            biscuit += 1
+        biscuit += 1
 
     return hungry
+
+
 
 print(feedDog([1, 2, 3], [1, 1]))
