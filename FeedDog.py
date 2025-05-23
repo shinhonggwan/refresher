@@ -23,4 +23,4 @@ def feedDog(hunger_level, biscuit_size):
 
     return hungry
 
-
+print(feedDog([1, 2, 3], [1, 1]))
