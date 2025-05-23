@@ -10,13 +10,11 @@ def feedDog(hunger_level, biscuit_size):
     n = len(hunger_level)
     m = len(biscuit_size)
 
-
     hunger = 0
     biscuit = 0
 
     sorted_hunger_level = hunger_level.sort()
     sorted_biscuit_size = biscuit_size.sort()
 
-
     while hunger < n and biscuit < m:
-        if
+        if sorted_biscuit_size[biscuit] >= sorted_hunger_level[dog]:
