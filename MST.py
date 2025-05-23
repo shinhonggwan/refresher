@@ -13,3 +13,10 @@ def connect_bridges(G):
 
     visited = set()
     MST = []
+
+    distance[0] = 0
+
+    while len(visited) < :
+        currentNode = None
+        for v in range(len(G)):
+            if v
