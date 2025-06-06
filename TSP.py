@@ -13,5 +13,10 @@ def solve_tsp(G):
     solution = [0]
     number_of_nodes = len(G)
     visited = [False] * number_of_nodes
+    path = [0]
+    visited[0] = True
+    current_node = 0
+
+
 
 
