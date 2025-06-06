@@ -53,10 +53,11 @@ def solve_tsp(G):
 
     for i in range(1, number_of_nodes):
         # convert the MST array to as an adjacency list
-        if parent[i] != -1:
-            MST[parent[i]].append(i)
+        unvisited = parent[i]
+        if unvisited != -1:
+            MST[unvisited].append(i)
             # append i as a neighbor of its parent
-            MST[i].append(parent[i])
+            MST[i].append(unvisited)
             # append parent as a neighbor of i
 
     def DFS(unvisited, visited_nodes, tour):
