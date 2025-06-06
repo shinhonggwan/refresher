@@ -11,3 +11,7 @@ def solve_tsp(G):
     # returning a list of indices indicating the path taken
 
     solution = [0]
+    number_of_nodes = len(G)
+    visited = [False] * number_of_nodes
+
+
