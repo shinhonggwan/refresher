@@ -37,5 +37,34 @@ def solve_tsp(G):
                 key[i] = G[unvisited][i]
                 parent[i] = unvisited
 
+    for i in range(1, n):
+        # make the MST as an adjacency list
+        if parent[i] != -1:
+            MST[parent[i]].append(i)
+            MST[i].append(parent[i])
 
+    def dfs(unvisited, visited_nodes, tour):
+        # performing DFS traversal on the MST
+        visited_nodes[unvisited] = True
+        tour.append(unvisited)
+        for i in MST[u]:
+            if not visited_nodes[i]:
+                dfs(i, visited_nodes, tour)
+
+    visited_nodes = [False] * number_of_nodes
+    tour = []
+    dfs(0, visited_nodes, tour)
+    tour.append(0)
+
+    return tour
+
+G = [
+    [0, 2, 3, 20, 1],
+    [2, 0, 15, 2, 20],
+    [3, 15, 0, 20, 13],
+    [20, 2, 20, 0, 9],
+    [1, 20, 13, 9, 0],
+]
+
+print(solve_tsp(G))
 
