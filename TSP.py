@@ -3,20 +3,17 @@
 # Course: CS 325
 # Assignment: Assignment: Heuristic Algorithms
 
-# The below function took note of the pseudocode as well as the
-# work/solution.py from Exploration 9.2 - Heuristic Algorithms for NP-Hard Problems
+# The below function took note of the Traveling Salesman Problem section
+# and the Minimum Spanning Tree-based Heuristic section
+# from the Exploration 9.3 - Heuristic Algorithms for Traveling Salesman Problem
 
 def solve_tsp(G):
     # traveling salesman problem
     # returning a list of indices indicating the path taken
 
-    solution = [0]
     number_of_nodes = len(G)
-    visited = [False] * number_of_nodes
-    path = [0]
-    visited[0] = True
-    current_node = 0
 
+    MST = [[] for _ in range(number_of_nodes)]
 
-
+    while len(path) < number_of_nodes:
 
