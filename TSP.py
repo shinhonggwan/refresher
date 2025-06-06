@@ -14,6 +14,14 @@ def solve_tsp(G):
     number_of_nodes = len(G)
 
     MST = [[] for _ in range(number_of_nodes)]
+    selected = [False] * number_of_nodes
+    key = [float('inf')] * number_of_nodes
+    parent = [-1] * number_of_nodes
+    key[0] = 0
 
-    while len(path) < number_of_nodes:
+    for _ in range(n):
+        unvisited = -1
+        minimum_key = float('inf')
+        for v in range(number_of_nodes):
+            if not selected[v] and
 
