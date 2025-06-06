@@ -32,4 +32,10 @@ def solve_tsp(G):
 
         selected[unvisited] = True
 
+        for i in range(number_of_nodes):
+            if G[unvisited][i] < key[i] and G[unvisited][i] > 0 and not selected[i]:
+                key[i] = G[unvisited][i]
+                parent[i] = unvisited
+
+
 
