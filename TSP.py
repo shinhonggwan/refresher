@@ -45,7 +45,7 @@ def solve_tsp(G):
 
         for i in range(number_of_nodes):
             # updating key and parent for adjacent nodes
-            if G[unvisited][i] < key[i] and G[unvisited][i] > 0 and not selected[i]:
+            if G[unvisited][i] > 0 and not selected[i] and G[unvisited][i] < key[i]:
                 # if node i hasn't been selected and weidhts is greater than 0
                 key[i] = G[unvisited][i]
                 parent[i] = unvisited
