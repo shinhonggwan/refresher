@@ -22,6 +22,14 @@ def solve_tsp(G):
     for _ in range(n):
         unvisited = -1
         minimum_key = float('inf')
-        for v in range(number_of_nodes):
-            if not selected[v] and
+        for i in range(number_of_nodes):
+            if not selected[i] and key[i] < minimum_key:
+                minimum_key = key[i]
+                unvisited = i
+
+        if unvisited == -1:
+            break
+
+        selected[unvisited] = True
+
 
