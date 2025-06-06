@@ -47,7 +47,7 @@ def solve_tsp(G):
         # performing DFS traversal on the MST
         visited_nodes[unvisited] = True
         tour.append(unvisited)
-        for i in MST[u]:
+        for i in MST[unvisited]:
             if not visited_nodes[i]:
                 dfs(i, visited_nodes, tour)
 
